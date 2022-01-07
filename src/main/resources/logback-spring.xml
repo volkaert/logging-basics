@@ -1,0 +1,13 @@
+<configuration>
+
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml" />
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+    <logger level="TRACE" name="fr.volkaert.logging_basics.webapi.LoggingBasicsRestController" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+</configuration>
