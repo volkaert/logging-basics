@@ -7,7 +7,18 @@
         <appender-ref ref="CONSOLE"/>
     </root>
 
-    <logger level="TRACE" name="fr.volkaert.logging_basics.webapi.LoggingBasicsRestController" additivity="false">
+    <logger name="fr.volkaert.logging_basics.webapi.LoggingBasicsRestController" level="TRACE" additivity="false">
         <appender-ref ref="CONSOLE"/>
     </logger>
+
+    <logger name="org.hibernate.SQL" level="DEBUG" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+    <!-- Acivate or deactivate the following logger if you want to log the used bind parameter values-->
+    <!--
+    <logger name="org.hibernate.type.descriptor.sql" level="TRACE" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    -->
 </configuration>
